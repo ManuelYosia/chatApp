@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ebc77857b9.js" crossorigin="anonymous"></script>
     <title>Users</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
             <div class="search">
                 <span class="text">Select an user to start chat</span>
                 <input type="text" placeholder="Enter name to search">
-                <button><i><span class="iconify" data-icon="material-symbols:search"></span></i></button>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="users-list">
                 <a href="#">
@@ -92,5 +92,6 @@
         </section>
     </div>
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+    <script src="./javascript/searchbar.js"></script>
 </body>
 </html>
