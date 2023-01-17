@@ -13,12 +13,7 @@ signUpBtn.onclick = () => {
         if(xhr.readyState === XMLHttpRequest.DONE) {
             if(xhr.status === 200) {
                 let data = xhr.response
-                if(data === "Succsess") {
-                    location.href = "./login.php"
-                }else{
-                    errorTxt.textContent = data
-                    errorTxt.style.display = "block"
-                }
+                console.log(data)
             }
         }
     }
