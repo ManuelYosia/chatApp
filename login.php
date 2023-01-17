@@ -30,6 +30,6 @@
             <div class="link">Don't have an account? <a href="#">Sign Up now</a></div>
         </section>
     </div>
-    <script src="javascript/password-show-hide.js"></script>
+    <script src="js/password-show-hide.js"></script>
 </body>
 </html>
