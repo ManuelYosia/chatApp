@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ebc77857b9.js" crossorigin="anonymous"></script>
-    <title>Users</title>
-</head>
+<?php     
+    session_start();
+    if(!isset($_SESSION['unique_id'])) {
+        header("location: login.php");
+    }
+?>
+<?php 
+include_once "header.php"; 
+?>
 <body>
     <div class="wrapper">
         <section class="users">
+            <?php 
+                include_once "php/config.php";
+                $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$_SESSION['unique_id']}'");
+
+                if(mysqli_num_rows($sql) > 0){
+                    $row = mysqli_fetch_assoc($sql);
+                }
+            ?>
             <header>
                 <div class="content">
                     <img src="img.JPG" alt="">
                     <div class="details">
-                        <span>MaYo</span>
-                        <p>Active now</p>
+                        <span><?php echo $row['firstname']." ". $row['lastname']?></span>
+                        <p><?php echo $row['status']?></p>
                     </div>
                 </div>
                 <a href="#" class="logout">Logout</a>
@@ -92,6 +99,6 @@
         </section>
     </div>
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
-    <script src="./javascript/searchbar.js"></script>
+    <script src="js/searchbar.js"></script>
 </body>
 </html>

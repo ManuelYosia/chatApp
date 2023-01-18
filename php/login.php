@@ -18,13 +18,14 @@
 
         function validateForm() {
             if(!empty($this->email) && !empty($this->password)) {
-                $sql = mysqli_query($this->conn, "SELECT email FROM users WHERE email = '{$this->email}'");
+                $sql = mysqli_query($this->conn, "SELECT * FROM users WHERE email = '{$this->email}'");
 
                 if(mysqli_num_rows($sql) > 0){
-                    $sql1 = mysqli_query($this->conn, "SELECT * FROM users WHERE email = '{$this->email}'");
-                    $row = mysqli_fetch_assoc($sql1);
+                    $row = mysqli_fetch_assoc($sql);
 
                     if($row['password'] === $this->password) {
+                        $status = "online";
+                        $sql1 = mysqli_query($this->conn, "UPDATE users SET status='{$status}'");
                         $_SESSION['unique_id'] = $row['unique_id'];
 
                         $this->response = "Success";
