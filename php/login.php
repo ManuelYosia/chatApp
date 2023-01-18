@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include_once "config.php";
 
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -24,11 +25,11 @@
                     $row = mysqli_fetch_assoc($sql1);
 
                     if($row['password'] === $this->password) {
-
+                        $_SESSION['unique_id'] = $row['unique_id'];
 
                         $this->response = "Success";
                     }else{
-                        $this->response = "Please enter a right password";
+                        $this->response = "Email and Password are not match!";
                     }
                 }else{
                     $this->response = "Email is unregistered"; 

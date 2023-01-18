@@ -14,7 +14,7 @@ logInBtn.onclick = () => {
             if(xhr.status === 200) {
                 let data = xhr.response;
                 if(data === "Success") {
-                    location.href = "user.php"
+                    location.href = "users.php"
                 }else{
                     errorTxt.style.display = "block";
                     errorTxt.textContent = data;

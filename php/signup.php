@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     include_once "config.php";
 
     $firstName = mysqli_real_escape_string($conn, $_POST['first-name']);
@@ -57,7 +56,6 @@
                                         $sql2 = mysqli_query($this->conn, "SELECT * FROM users WHERE email = '{$this->email}'");
                                         $row = mysqli_fetch_assoc($sql2);
 
-                                        $_SESSION['unique_id'] = $row['unique_id'];
                                         $this->response = "Success";
                                     }else{
                                         $this->response = "Something went wrong";
