@@ -38,13 +38,15 @@
 
                             $time = time();
 
-                            $img_explode = explode(".", $img_name); //seperate name and ext
+                            $img_name_replace = str_replace(" ", "_", $img_name);
+
+                            $img_explode = explode(".", $img_name_replace); //seperate name and ext
 
                             $img_ext = end($img_explode);
 
                             if(in_array($img_ext, $extension)) {
                                 
-                                $new_img_name = $time.$img_name;
+                                $new_img_name = $time.$img_name_replace;
                                 
                                 if(move_uploaded_file($tmp_name, "images/".$new_img_name)) {
                                     $status = "Offline";

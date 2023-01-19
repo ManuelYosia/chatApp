@@ -1,5 +1,5 @@
 const searchBar = document.querySelector(".search input"),
-searchBtn = document.querySelector(".search button"), userList = document.querySelector(".users .users-list");
+searchBtn = document.querySelector(".search button"), userList = document.querySelector(".users .users-list"), logOut = document.querySelector(".users .logout");
 
 searchBtn.onclick = () => {
     searchBar.classList.toggle("active");
@@ -45,3 +45,16 @@ setInterval(() => {
     }
     xhr.send();
 }, 500);
+
+window.onunload = () => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "php/logout.php", true);
+    xhr.onload = () => {
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+            if(xhr.status === 200) {
+                console.log("Log Out");
+            }
+        }
+    }
+    xhr.send();
+}

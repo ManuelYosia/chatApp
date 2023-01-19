@@ -20,13 +20,13 @@ include_once "header.php";
             ?>
             <header>
                 <div class="content">
-                    <img src=<?php echo "php/images/" . $row['img'] ?> alt="">
+                    <img src=<?php echo "php/images/".$row['img']?> alt="">
                     <div class="details">
                         <span><?php echo $row['firstname']." ". $row['lastname']?></span>
                         <p><?php echo $row['status']?></p>
                     </div>
                 </div>
-                <a href="#" class="logout">Logout</a>
+                <a href="php/logout.php" class="logout" onunload = ()>Logout</a>
             </header>
             <div class="search">
                 <span class="text">Select an user to start chat</span>
