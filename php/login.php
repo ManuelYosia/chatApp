@@ -25,7 +25,7 @@
 
                     if($row['password'] === $this->password) {
                         $status = "online";
-                        $sql1 = mysqli_query($this->conn, "UPDATE users SET status='{$status}'");
+                        $sql1 = mysqli_query($this->conn, "UPDATE users SET status='{$status}' WHERE email = '{$this->email}'");
                         $_SESSION['unique_id'] = $row['unique_id'];
 
                         $this->response = "Success";

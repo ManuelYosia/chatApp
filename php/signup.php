@@ -34,7 +34,7 @@
                             $img_type = $_FILES['image']['type'];
                             $tmp_name = $_FILES['image']['tmp_name'];
 
-                            $extension = ['JPG', 'PNG', 'JPEG'];
+                            $extension = ['JPG', 'PNG', 'JPEG', 'jpg', 'png', 'jpeg'];
 
                             $time = time();
 

@@ -20,7 +20,7 @@ include_once "header.php";
             ?>
             <header>
                 <div class="content">
-                    <img src="img.JPG" alt="">
+                    <img src=<?php echo "php/images/" . $row['img'] ?> alt="">
                     <div class="details">
                         <span><?php echo $row['firstname']." ". $row['lastname']?></span>
                         <p><?php echo $row['status']?></p>
@@ -34,71 +34,12 @@ include_once "header.php";
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="users-list">
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="img.JPG" alt="">
-                        <div class="details">
-                            <span>MaYo</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><span class="iconify" data-icon="carbon:dot-mark"></span></div>
-                </a>
+                
             </div>
             
         </section>
     </div>
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
-    <script src="js/searchbar.js"></script>
+    <script src="js/users.js"></script>
 </body>
 </html>
