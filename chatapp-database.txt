@@ -1,0 +1,3 @@
+DB Name = id20189753_chatapp
+DB Host = id20189753_cnweb
+DB Pass = NGin{wJ^/k5O6Mr[
